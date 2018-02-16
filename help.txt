@@ -1,0 +1,1 @@
+=IF(B7>"", 0, IF(C7>"", 1, IF(D7>"", 2.5, IF(E7>"", 4, IF(F7>"", 5, "Enter 'Y' in appropriate Yellow field")))))

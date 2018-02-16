@@ -26,7 +26,6 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
-
     <link rel="stylesheet" href="css/styleSurvey.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -67,7 +66,7 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
 
         .banner{
             width:100%;
-            height: 15px;
+            height: 10px;
             margin:7px auto;
             -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
             -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -147,14 +146,15 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
 
             <div class="tab-content" style="margin-top: 5%;width:100%">
                <?php
-                  $cType=1;// for tab
-                  $count=1; // for gobal
-                  $oc=1;
+                  $cType=1;// for question type tab
+                  $count=1; // for questions count
+                  $oc=1; // overall questions options count
                   $qCtype=getQuestionTypes();
                   while($qtype = mysqli_fetch_assoc($qCtype)) { // for question types ?>
                    <div class="tab-pane"id="tab<?php echo $cType?>">
                        <?php
-                         $questions= getQuestions($qtype['id']);$qcount=mysqli_num_rows($questions);
+                         $questions= getQuestions($qtype['id']);
+                         $qcount=mysqli_num_rows($questions);
                          $qc=1;
                          while($qstns = mysqli_fetch_assoc($questions)) { // for questions?>
                        <div class="q scrollposition<?php echo $count;?>">
@@ -167,7 +167,7 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
                            <ul>
                            <?php    while($optn = mysqli_fetch_assoc($options)) {  //for option ?>
                                 <li>
-                                    <input type="radio" id="f<?php echo $oc; ?>-option" name="selector<?php echo $count; ?>" class="choice" value="1">
+                                    <input type="radio" id="f<?php echo $oc; ?>-option" name="selector<?php echo $count; ?>" class="choice" value="<?php echo $optn['optnvalue'];?>">
                                     <label for="f<?php echo $oc; ?>-option"><?php echo $optn['options'];?>
                                     </label>
 
@@ -180,6 +180,7 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
                        </div>
                        <?php $count++; $qc++;} // questions end ?>
                    </div>
+                   <input type="hidden" id="qc<?php echo $cType;?>" data-qcount<?php echo $cType;?>="<?php echo $qc-1; ?>" >
                <?php $cType++; } //questions types end ?>
 
 
@@ -192,7 +193,8 @@ error_log("\nrow count" .$qTypecount , 3, "C:/XampG/htdocs/error.log");
                     <li class="next"><a href="#">Next</a></li>
                 </ul>
                 <div style="text-align:center">
-                    <button type="submit" class="btn btn-primary sbtBtn btn-md" style="display:none;background:#337ab7; border: none;">Submit</button>
+                    <button type="submit" class="btn btn-primary sbtBtn btn-md" style="background:#337ab7; border: none;">Submit</button>
+                    <input type="hidden" id="qtc" data-qtcount="<?php echo $qTypecount; ?>" data-overallqc="<?php echo $count; ?>" >
                 </div>
             </div>
         </div>

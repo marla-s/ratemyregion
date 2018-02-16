@@ -213,3 +213,34 @@ $(".q input:radio").click(function() {
     $('.questn').removeClass('alert');
     $('.questn').removeClass('alert-danger');
 });
+
+
+$('.sbtBtn').click(function(){
+
+  var qtc= + $('#qtc').data('qtcount');
+  var result= new Array();
+  var initialquestions=1; var oq=0;
+  for(var i=1;i<=qtc;i++){
+
+      var avg=0;
+      var sum=0;
+      var qc= + $('#qc'+i).data('qcount'+i);
+      oq=oq+qc;
+      for(var j=initialquestions;j<=oq;j++) {
+          var sel= "selector"+j;
+          var qvalue = +$('input[name='+sel+']:checked').val();
+          sum=sum+qvalue;
+      }
+      initialquestions=oq+1;
+      avg=  sum/qc;
+      result.push(avg.toFixed(2));
+      window.location.href="results.php"
+  }
+
+  console.log(result);
+
+
+});
+
+
+
