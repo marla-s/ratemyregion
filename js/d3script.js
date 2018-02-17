@@ -23,7 +23,6 @@ $(document).ready(function() {
                     .attr("width", w)
                     .attr("height", h)
                     .style({'margin-left':'10%'})
-                    .style({'margin-left':'10%'})
                     .append("svg:g")
                     .attr("class", "concentricchart")
                     .attr("transform", "translate("+((w/3)+padding)+","+h/3+")");
