@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.bootstrap.wizard.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styleSurvey.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .progress-bar {
+            border-radius: 5px;
+            float: left;
+            width: 0%;
+            height: 100%;
+            font-size: 12px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            background-color: #337ab7;
+        .box-shadow(inset 0 -1px 0 rgba(0,0,0,.15));
+        .transition(width .6s ease);
+        }
+        .alert-danger {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .pager li > a:hover,
+        .pager li > a:focus {
+            text-decoration: none;
+            background-color:  #fff;
+            color: #333;
+        }
+    </style>
+
+</head>
+
+
+<body style="color:#333">
+
+<div class="page">
+<header class="page-head" >
+    <div class="rd-navbar-wrap" style="height: 110px;">
+        <nav data-layout="rd-navbar-fixed "  data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="53px" data-lg-stick-up-offset="53px" data-md-stick-up="true" data-lg-stick-up="true" class="rd-navbar rd-navbar-corporate-dark rd-navbar-original rd-navbar-static navbar-fixed-top">
+            <div class="rd-navbar-inner">
+                <div class="rd-navbar-group rd-navbar-search-wrap">
+                    <div class="rd-navbar-panel">
+                        <button data-custom-toggle=".rd-navbar-nav-wrap" data-custom-toggle-disable-on-blur="true" class="rd-navbar-toggle"><span></span></button><a href="index.html" class="rd-navbar-brand brand"><img src="images/logo.jpg" height="40px" style="height:40px;"></a>
+                    </div>
+                    <div class="rd-navbar-nav-wrap">
+                        <div class="rd-navbar-nav-inner">
+                            <ul class="rd-navbar-nav">
+                                <li><a href="survey.html">Take the Survey</a>
+                                </li>
+                                <li><a href="#">Results</a>
+                                </li>
+                                <li><a href="about.html">About</a>
+                                </li>
+                                <li><a href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<div class="questions">
+
+    <div id="rootwizard">
+        <div class="navbar navbar-default navbar-fixed-top" style="margin-top: 70px;">
+            <div class="navbar-inner">
+                 <div class="container" style="margin-top:40px;">
+                    <div id="bar"  class="progress">
+                        <div class="progress-bar "  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+                    </div>
+                     <div style="height:10px;font-size: 0.9em">
+                         Step:<span class="stepNum">1</span>/6
+                     </div>
+                 </div>
+                <div class="container tabHeader">
+                    <ul class="navTabs">
+                        <li class="liTabs" data-tname="Openness to Entrepreneurship"><a href="#tab1" data-toggle="tab" class="tabS"></a></li>
+                        <li class="liTabs" data-tname="Balanced Economic Development Strategies"><a href="#tab2" data-toggle="tab" class="tabS"></a></li>
+                        <li class="liTabs" data-tname="Robust Entrepreneurship Programs"><a href="#tab3" data-toggle="tab" class="tabS"> </a></li>
+                        <li class="liTabs" data-tname="Prudent Investment Processes"><a href="#tab4" data-toggle="tab" class="tabS"></a></li>
+                        <li class="liTabs" data-tname="An Expansive View"><a href="#tab5" data-toggle="tab" class="tabS"></a></li>
+                        <li class="liTabs" data-tname="Infrastructure"><a href="#tab6" data-toggle="tab" class="tabS"></a></li>
+                        <li class="namesHeader" id="tMainHeader" style="margin-left:35%;margin-bottom:0">Openness to Entrepreneurship</li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-content" style="margin-top: 100px;width:100%">
+            <div class="tab-pane" id="tab1">
+                <div class="q first">
+                    <div class="row q1 questn" style="box-sizing: border-box">
+                        <div class="col-lg-offset-1 col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0"><span class="qstnNumber" style="padding-right: 5px">1.1</span> The region views high-growth, entrepreneurial businesses as the key to its long-term success.
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <input type="radio" id="f1-option" name="selector1" class="choice" value="1">
+                            <label for="f1-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="s1-option" name="selector1"  class="choice" value="1">
+                            <label for="s1-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="t1-option" name="selector1"  class="choice" value="1">
+                            <label for="t1-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p1-option" name="selector1"  class="choice" value="1">
+                            <label for="p1-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q1-option" name="selector1"  class="choice" value="1">
+                            <label for="q1-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q second">
+                    <div class="row q2 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">1.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">The local culture celebrates entrepreneurial success and does not punish failure.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f2-option" name="selector2"  class="choice" value="1">
+                            <label for="f2-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s2-option" name="selector2"  class="choice" value="1">
+                            <label for="s2-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t2-option" name="selector2"  class="choice" value="1">
+                            <label for="t2-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p2-option" name="selector2"  class="choice" value="1">
+                            <label for="p2-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q2-option" name="selector2"  class="choice" value="1">
+                            <label for="q2-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q third">
+
+                    <div class="row q3 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">1.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">Successful entrepreneurs play leadership roles in local economic development programs and policy-making bodies.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f3-option" name="selector3"  class="choice" value="1">
+                            <label for="f3-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s3-option" name="selector3"  class="choice" value="1">
+                            <label for="s3-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t3-option" name="selector3"  class="choice" value="1">
+                            <label for="t3-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p3-option" name="selector3"  class="choice" value="1">
+                            <label for="p3-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q3-option" name="selector3"  class="choice" value="1">
+                            <label for="q3-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <div class="q four">
+                    <!--<div class="alert alert-danger">Check this custom checkbox</div>-->
+                    <!--<p style="display:inline;margin-right: 10px">1.1</p-->
+
+                    <div class="row q4 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">2.1</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">Economic development "grow your own" strategies are as important and well funded as traditional "attraction" and "retention" programs.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f4-option" name="selector4" class="choice" value="1">
+                            <label for="f4-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s4-option" name="selector4"  class="choice" value="1">
+                            <label for="s4-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t4-option" name="selector4"  class="choice" value="1">
+                            <label for="t4-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p4-option" name="selector4"  class="choice" value="1">
+                            <label for="p4-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q4-option" name="selector1"  class="choice" value="1">
+                            <label for="q4-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q five">
+                    <div class="row q5 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">2.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There is close coordination between organizations responsible for "grow your own," "attraction," and "retention" programs.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f5-option" name="selector5"  class="choice" value="1">
+                            <label for="f5-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s5-option" name="selector5"  class="choice" value="1">
+                            <label for="s5-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t5-option" name="selector5"  class="choice" value="1">
+                            <label for="t5-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p5-option" name="selector5"  class="choice" value="1">
+                            <label for="p5-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q5-option" name="selector5"  class="choice" value="1">
+                            <label for="q5-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q six">
+
+                    <div class="row q6 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">2.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">Business retention programs also seek to help business "spin out" new ventures and "reinvent" themselves to meet changing market needs.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f6-option" name="selector6"  class="choice" value="1">
+                            <label for="f6-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s6-option" name="selector6"  class="choice" value="1">
+                            <label for="s6-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t6-option" name="selector6"  class="choice" value="1">
+                            <label for="t6-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p6-option" name="selector6"  class="choice" value="1">
+                            <label for="p6-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q6-option" name="selector6"  class="choice" value="1">
+                            <label for="q6-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab3">
+                <div class="q seven">
+                    <!--<div class="alert alert-danger">Check this custom checkbox</div>-->
+                    <!--<p style="display:inline;margin-right: 10px">1.1</p-->
+
+                    <div class="row q7 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">3.1</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There are easily accessible entrepreneurship training and mentoring programs led by the public sector, the private sector, or both.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f7-option" name="selector7" class="choice" value="1">
+                            <label for="f7-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s7-option" name="selector7"  class="choice" value="1">
+                            <label for="s7-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t7-option" name="selector7"  class="choice" value="1">
+                            <label for="t7-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p7-option" name="selector7"  class="choice" value="1">
+                            <label for="p7-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q7-option" name="selector7"  class="choice" value="1">
+                            <label for="q7-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q eight">
+                    <div class="row q8 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">3.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There are affordable and domain/cluster-specific professional services available for early-stage, growth-oriented ventures (patent attorneys, CPAs, consultants, etc.).
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f8-option" name="selector8"  class="choice" value="1">
+                            <label for="f8-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s8-option" name="selector8"  class="choice" value="1">
+                            <label for="s8-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t8-option" name="selector8"  class="choice" value="1">
+                            <label for="t8-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p8-option" name="selector8"  class="choice" value="1">
+                            <label for="p8-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q8-option" name="selector8"  class="choice" value="1">
+                            <label for="q8-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q nine">
+
+                    <div class="row q9 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">3.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There are affordable and domain/cluster-specific professional services available for early-stage, growth-oriented ventures (patent attorneys, CPAs, consultants, etc.).
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f9-option" name="selector9"  class="choice" value="1">
+                            <label for="f9-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s9-option" name="selector9"  class="choice" value="1">
+                            <label for="s9-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t9-option" name="selector9"  class="choice" value="1">
+                            <label for="t9-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p9-option" name="selector9"  class="choice" value="1">
+                            <label for="p9-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q9-option" name="selector9"  class="choice" value="1">
+                            <label for="q9-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab4">
+                <div class="q ten">
+                    <!--<div class="alert alert-danger">Check this custom checkbox</div>-->
+                    <!--<p style="display:inline;margin-right: 10px">1.1</p-->
+
+                    <div class="row q10 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">4.1</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">The region has a history of seeking and allocating local resources (taxes, bonds, special assessments) to support balanced economic development strategies.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f10-option" name="selector10" class="choice" value="1">
+                            <label for="f10-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s10-option" name="selector10"  class="choice" value="1">
+                            <label for="s10-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t10-option" name="selector10"  class="choice" value="1">
+                            <label for="t10-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p10-option" name="selector10"  class="choice" value="1">
+                            <label for="p10-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q10-option" name="selector10"  class="choice" value="1">
+                            <label for="q10-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q eleven">
+                    <div class="row q11 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">4.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There are objective processes in place to support balanced economic development programs and measure their success over the long-term.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f11-option" name="selector11"  class="choice" value="1">
+                            <label for="f11-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s11-option" name="selector11"  class="choice" value="1">
+                            <label for="s11-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t11-option" name="selector11"  class="choice" value="1">
+                            <label for="t11-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p11-option" name="selector11"  class="choice" value="1">
+                            <label for="p11-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q11-option" name="selector11"  class="choice" value="1">
+                            <label for="q11-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q twelve">
+
+                    <div class="row q12 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">4.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">There is open and sophisticated understanding of economic development strategies in the local media and among "informal" decision-makers and influencers.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f12-option" name="selector12"  class="choice" value="1">
+                            <label for="f12-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s12-option" name="selector12"  class="choice" value="1">
+                            <label for="s12-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t12-option" name="selector12"  class="choice" value="1">
+                            <label for="t12-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p12-option" name="selector12"  class="choice" value="1">
+                            <label for="p12-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q12-option" name="selector12"  class="choice" value="1">
+                            <label for="q12-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab5">
+                <div class="q thirtn">
+                    <!--<div class="alert alert-danger">Check this custom checkbox</div>-->
+                    <!--<p style="display:inline;margin-right: 10px">1.1</p-->
+
+                    <div class="row q13 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">5.1</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">The region and culture is open to ideas that originate outside the boundaries of the local municipalities.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f13-option" name="selector13" class="choice" value="1">
+                            <label for="f13-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s13-option" name="selector13"  class="choice" value="1">
+                            <label for="s13-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t13-option" name="selector13"  class="choice" value="1">
+                            <label for="t13-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p13-option" name="selector13"  class="choice" value="1">
+                            <label for="p13-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q13-option" name="selector13"  class="choice" value="1">
+                            <label for="q13-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q fourtn">
+                    <div class="row q14 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">5.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">The region's R&D organizations (universities, government labs, commercial R&D) are open to working with local businesses to commercialize new technologies and have effective processes in place to do so.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f14-option" name="selector14"  class="choice" value="1">
+                            <label for="f14-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s14-option" name="selector14"  class="choice" value="1">
+                            <label for="s14-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t14-option" name="selector14"  class="choice" value="1">
+                            <label for="t14-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p14-option" name="selector14"  class="choice" value="1">
+                            <label for="p14-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q14-option" name="selector14"  class="choice" value="1">
+                            <label for="q14-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q fiftn">
+
+                    <div class="row q15 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">5.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">Major local businesses are open to working with new ventures to test and evaluate new products and services (local "Market Pull").
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f15-option" name="selector15"  class="choice" value="1">
+                            <label for="f15-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s15-option" name="selector15"  class="choice" value="1">
+                            <label for="s15-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t15-option" name="selector15"  class="choice" value="1">
+                            <label for="t15-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p15-option" name="selector15"  class="choice" value="1">
+                            <label for="p15-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q15-option" name="selector15"  class="choice" value="1">
+                            <label for="q15-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tab-pane" id="tab6">
+                <div class="q sixten">
+                    <!--<div class="alert alert-danger">Check this custom checkbox</div>-->
+                    <!--<p style="display:inline;margin-right: 10px">1.1</p-->
+
+                    <div class="row q16 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">6.1</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">  The region has a high-quality airport and/or high-speed train service with regular connections to key financial and technology centers.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f16-option" name="selector16" class="choice" value="1">
+                            <label for="f16-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s16-option" name="selector16"  class="choice" value="1">
+                            <label for="s16-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t16-option" name="selector16"  class="choice" value="1">
+                            <label for="t16-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p16-option" name="selector16"  class="choice" value="1">
+                            <label for="p16-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q16-option" name="selector16"  class="choice" value="1">
+                            <label for="q16-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="q sevntn">
+                    <div class="row q17 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">6.2</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">  The region has world-class connectivity (bandwidth, telecom) and ubiquitous wireless coverage.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f17-option" name="selector17"  class="choice" value="1">
+                            <label for="f17-option">Never
+                            </label>
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s17-option" name="selector17"  class="choice" value="1">
+                            <label for="s17-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t17-option" name="selector17"  class="choice" value="1">
+                            <label for="t17-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p17-option" name="selector17"  class="choice" value="1">
+                            <label for="p17-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q17-option" name="selector17"  class="choice" value="1">
+                            <label for="q17-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+                <div  class="q eigtn">
+
+                    <div class="row q18 questn" style="box-sizing: border-box">
+                        <div class="col-lg-1" style="box-sizing: border-box;padding-left:4px;text-align:right">6.3</div>
+                        <div class="col-lg-11" style="box-sizing: border-box;text-align: left;padding-left:0">The region has an effective and functioning highway system, and a public transportation system, that connects local universities, business centers, and other technology and financial assets.
+                        </div>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <input type="radio" id="f18-option" name="selector18"  class="choice" value="1">
+                            <label for="f18-option">Never
+                            </label>
+
+                            <div class="check"></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="s18-option" name="selector18"  class="choice" value="1">
+                            <label for="s18-option">Sometimes
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+
+                        <li>
+                            <input type="radio" id="t18-option" name="selector18"  class="choice" value="1">
+                            <label for="t18-option">Often
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="p18-option" name="selector18"  class="choice" value="1">
+                            <label for="p18-option">Usually
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                        <li>
+                            <input type="radio" id="q18-option" name="selector18"  class="choice" value="1">
+                            <label for="q18-option">Always
+                            </label>
+
+                            <div class="check"><div class="inside"></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="tab-pane" id="tab7">-->
+                <!--<div class="q first">-->
+                    <!--&lt;!&ndash;<div class="alert alert-danger">Check this custom checkbox</div>&ndash;&gt;-->
+                    <!--<p class="q1 questn">1. Formal and Informal Mentorship/Peer groups-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f1-option" name="selector1" class="choice" value="1">-->
+                            <!--<label for="f1-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s1-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="s1-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t1-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="t1-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p1-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="p1-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q1-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="q1-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="q second">-->
+                    <!--<p class="q2 questn">2. Entrepreneur Self-Awareness assessments-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f2-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="f2-option">Not Available-->
+                            <!--</label>-->
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s2-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="s2-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t2-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="t2-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p2-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="p2-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q2-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="q2-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q third">-->
+                    <!--<p class="q3 questn">3. Innovation Intermediaries (one-on-one networking, knowledge transfer, service "ombudsman," pro-active connections and relationship building)-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f3-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="f3-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s3-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="s3-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t3-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="t3-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p3-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="p3-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q3-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="q3-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q fourth">-->
+                    <!--<p class="q4 questn">4. Business Model design and development-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f4-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="f4-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s4-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="s4-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t4-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="t4-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p4-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="p4-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q4-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="q4-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q fifth">-->
+                    <!--<p class="q5 questn">5. Market insight (data bases, analysis services)-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f5-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="f5-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s5-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="s5-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t5-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="t5-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p5-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="p5-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q5-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="q5-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q six">-->
+                    <!--<p class="q6 questn">6. Appropriate/affordable office and laboratory space-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f6-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="f6-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s6-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="s6-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t6-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="t6-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p6-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="p6-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q6-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="q6-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q seven">-->
+                    <!--<p class="q7 questn">7. Commercialization assistance and training-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f7-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="f7-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s7-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="s7-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t7-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="t7-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p7-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="p7-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q7-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="q7-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q eight">-->
+                    <!--<p class="q8 questn">8. Hands-on technical assistance-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f8-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="f8-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s8-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="s8-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t8-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="t8-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p8-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="p8-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q8-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="q8-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q nine">-->
+                    <!--<p class="q9 questn">9. Specialized assistance, e.g., export/import-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f9-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="f9-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s9-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="s9-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t9-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="t9-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p9-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="p9-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q9-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="q9-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="tab-pane" id="tab8">-->
+                <!--<div class="q first">-->
+                    <!--&lt;!&ndash;<div class="alert alert-danger">Check this custom checkbox</div>&ndash;&gt;-->
+                    <!--<p class="q1 questn">1. Formal and Informal Mentorship/Peer groups-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f10-option" name="selector1" class="choice" value="1">-->
+                            <!--<label for="f10-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s10-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="s10-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t10-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="t10-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p10-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="p10-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q10-option" name="selector1"  class="choice" value="1">-->
+                            <!--<label for="q10-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="q second">-->
+                    <!--<p class="q2 questn">2. Entrepreneur Self-Awareness assessments-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f11-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="f11-option">Not Available-->
+                            <!--</label>-->
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s11-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="s11-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t11-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="t11-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p11-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="p11-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q11-option" name="selector2"  class="choice" value="1">-->
+                            <!--<label for="q11-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q third">-->
+                    <!--<p class="q3 questn">3. Innovation Intermediaries (one-on-one networking, knowledge transfer, service "ombudsman," pro-active connections and relationship building)-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f12-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="f12-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s12-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="s12-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t12-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="t12-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p12-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="p12-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q12-option" name="selector3"  class="choice" value="1">-->
+                            <!--<label for="q12-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q fourth">-->
+                    <!--<p class="q4 questn">4. Business Model design and development-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f13-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="f13-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s13-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="s13-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t13-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="t13-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p13-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="p13-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q13-option" name="selector4"  class="choice" value="1">-->
+                            <!--<label for="q13-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q fifth">-->
+                    <!--<p class="q5 questn">5. Market insight (data bases, analysis services)-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f14-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="f14-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s14-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="s14-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t14-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="t14-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p14-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="p14-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q14-option" name="selector5"  class="choice" value="1">-->
+                            <!--<label for="q14-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q six">-->
+                    <!--<p class="q6 questn">6. Appropriate/affordable office and laboratory space-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f15-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="f15-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s15-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="s15-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t15-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="t15-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p15-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="p15-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q15-option" name="selector6"  class="choice" value="1">-->
+                            <!--<label for="q15-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q seven">-->
+                    <!--<p class="q7 questn">7. Commercialization assistance and training-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f16-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="f16-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s16-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="s16-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t16-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="t16-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p16-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="p16-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q16-option" name="selector7"  class="choice" value="1">-->
+                            <!--<label for="q16-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q eight">-->
+                    <!--<p class="q8 questn">8. Hands-on technical assistance-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f17-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="f17-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s17-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="s17-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t17-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="t17-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p17-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="p17-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q17-option" name="selector8"  class="choice" value="1">-->
+                            <!--<label for="q17-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q nine">-->
+                    <!--<p class="q9 questn">9. Specialized assistance, e.g., export/import-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f18-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="f18-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s18-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="s18-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t18-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="t18-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p18-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="p18-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q18-option" name="selector9"  class="choice" value="1">-->
+                            <!--<label for="q18-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div  class="q ten">-->
+                    <!--<p class="q10 questn">10. Formal and Informal Mentorship/Peer groups-->
+                    <!--</p>-->
+
+                    <!--<ul>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="f19-option" name="selector10"  class="choice" value="1">-->
+                            <!--<label for="f19-option">Not Available-->
+                            <!--</label>-->
+
+                            <!--<div class="check"></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="s19-option" name="selector10"  class="choice" value="1">-->
+                            <!--<label for="s19-option">Difficult to find and/or poor quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+
+                        <!--<li>-->
+                            <!--<input type="radio" id="t19-option" name="selector10"  class="choice" value="1">-->
+                            <!--<label for="t19-option">Readily available, but inconsistent quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="p19-option" name="selector10"  class="choice" value="1">-->
+                            <!--<label for="p19-option">Consistent quality, but limited availability-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                        <!--<li>-->
+                            <!--<input type="radio" id="q19-option" name="selector10"  class="choice" value="1">-->
+                            <!--<label for="q19-option">Consistent availability and high-quality-->
+                            <!--</label>-->
+
+                            <!--<div class="check"><div class="inside"></div></div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="tab-pane" id="tab9">-->
+                <!--6-->
+            <!--</div>-->
+            <!--<div class="tab-pane" id="tab10">-->
+                <!--7-->
+            <!--</div>-->
+            <ul class="pager wizard">
+                <li class="previous first" style="display:none;"><a href="#">First</a></li>
+                <li class="previous"><a href="#">Previous</a></li>
+                <li class="next last" style="display:none;"><a href="#">Last</a></li>
+                <li class="next"><a href="#">Next</a></li>
+            </ul>
+            <div style="text-align:center">
+            <button type="submit" class="btn btn-primary sbtBtn btn-md" style="display:none;background:#337ab7; border: none;">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+ <section class="section-40 section-sm-60 bg-cello">
+        <div class="shell">
+            <div class="range range-xs-center">
+                <div class="cell-xs-10 cell-sm-11 cell-md-12">
+                    <div class="range">
+                        <div class="cell-sm-6 cell-md-4">
+                            <div class="inset-md-right-30">
+                                <h6 class="text-uppercase text-big">About CEI</h6>
+                                <p class="offset-top-27 text-bismark">
+                                </p><p>
+                                The ODU Center for Enterprise Innovation (CEI) serves as a business-friendly entry point through which local startups, businesses, and organizations can engage the intellectual capital, world-class infrastructure, and cutting-edge technologies of ODU.</p>
+
+                                <p>CEI supports local economic development to promote a thriving entrepreneurial environment. Our collection of integrated programs advance businesses and organizations in the area to become strong contributors to the economy, focusing ideally on ventures that show promise of becoming high-growth, high-impact enterprises that may create expanded employment opportunities for the local workforce, wealth for stakeholders, and social benefit to the region.</p>
+
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4 offset-top-50 offset-sm-top-0">
+                            <h6 class="text-uppercase text-big">Quick links</h6>
+                            <div style="max-width: 340px;" class="row offset-top-22 offset-md-top-30">
+                                <div class="col-xs-6">
+                                    <ul class="list-marked-variant-2">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="#">Take the Survey</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6">
+                                    <ul class="list-marked-variant-2">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cell-sm-6 cell-md-4 offset-top-50 offset-md-top-0">
+                            <h6 class="text-uppercase text-big">Subscribe</h6>
+                            <div class="offset-top-22 offset-md-top-30">
+                                <p class="text-bismark">Get the latest information from ODU Center for Enterprise Innovation.</p>
+                                <form data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php" class="rd-mailform form-classic form-inline offset-top-15" novalidate="novalidate">
+                                    <div class="form-group">
+                                        <input id="contact-email" type="email" name="email" data-constraints="@Email @Required" class="form-control form-control-has-validation"><span class="form-validation"></span>
+                                        <label for="contact-email" class="form-label rd-input-label">Enter Your E-mail</label>
+                                    </div>
+                                    <button type="submit" aria-label="Subscribe" class="btn btn-icon-only btn-primary"><span class="icon icon-xs icon-white fa-envelope-o"></span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="page-foot section-15 bg-cloud-burst">
+        <div class="shell text-center">
+            <div class="range">
+                <div class="cell-sm-12">
+                    <p class="rights text-bismark"><span>©&nbsp;</span><span id="copyright-year">2018</span><span>Center for Enterprise Innovation</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/survey.js"></script>
+
+
+</body>
+
+</html>
