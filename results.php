@@ -73,9 +73,9 @@
         </div>
     </header>
 
-    <div id="holder" style="margin-top: 7%">
+    <div id="holder" style="margin-top: 7%;margin-left:5%">
 
-         <p style="text-align: left;padding-left: 40px">Your score</p>
+         <p style="text-align: left;padding-left: 80px">Your score</p>
         <div class="concentric" data-role="concentric" data-width=500 data-height=660 data-thickness=15></div>
         <p style="text-align: center">Expert score</p>
         <div class="concentric" data-role="concentric" data-width=420 data-height=500 data-thickness=15></div>
