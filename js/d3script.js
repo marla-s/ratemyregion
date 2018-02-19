@@ -298,32 +298,32 @@ $(document).ready(function() {
                         {
                             "label": "Openness to Enterpreneurship",
                             "value": 80,
-                            "color": "#393b79"
+                            "color": "#64B6F2"
                         },
                         {
                             "label": "Balanced Economic Development Strategies",
                             "value": 40,
-                            "color": "#5254a3"
+                            "color": "#1976D3"
                         },
                         {
                             "label": "Robust Entrepreneurship Programs",
                             "value": 60,
-                            "color": "#6b6ecf"
+                            "color": "#d62728"
                         },
                         {
                             "label": "Prudent Investment Processes",
                             "value": 80,
-                            "color": "#9c9ede"
+                            "color": "#fd8d3c"
                         },
                         {
                             "label": "An Expansive View",
                             "value": 80,
-                            "color": "#bcbddc"
+                            "color": "#FFD451"
                         },
                         {
                             "label": "Infrastructure",
                             "value": 80,
-                            "color": "#dadaeb"
+                            "color": "#bcbddc"
                         }
 
                     ]
