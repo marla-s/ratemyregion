@@ -7934,7 +7934,7 @@ form {
 @media (min-width: 1200px) {
   .shell,
   .shell-wide {
-    max-width: 1200px;
+    max-width: 1400px;
   }
 }
 
@@ -28640,8 +28640,8 @@ form.label-outside .form-validation {
 }
 
 .section-50 {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin-top: 60px;
+  margin-bottom: 140px;
 }
 
 .section-60 {
@@ -28789,10 +28789,10 @@ form.label-outside .form-validation {
     padding-top: 75px;
     padding-bottom: 75px;
   }
-  .section-sm-90 {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
+  /*.section-sm-90 {*/
+    /*padding-top: 90px;*/
+    /*padding-bottom: 90px;*/
+  /*}*/
   .section-sm-100 {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -44567,7 +44567,7 @@ html.boxed .rd-navbar--is-clone {
   position: relative;
   text-align: center;
   white-space: nowrap;
-  background-position: center center;
+  background-position:50% 20%;
   overflow: hidden;
 }
 
@@ -47914,4 +47914,32 @@ img.mfp-img {
   z-index: 1;
   overflow: hidden;
   min-height: 100vh !important;
+}
+
+
+.sheet2Q{
+  font-family:Open Sans, Helvetica, Arial, sans-serif;
+  color: #151212;
+}
+
+.sheet2List{
+  text-align: left;
+  padding-left:20px;
+  padding-top:10px;
+  color: black;
+}
+
+.transbox{
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+.layer {
+  background-color:rgba(255,255,255, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
